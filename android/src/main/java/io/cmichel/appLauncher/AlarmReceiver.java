@@ -21,7 +21,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         
         SharedPreferences sharedPref = context.getSharedPreferences("io.cmichel.appLauncher", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(alarmID, alarmID);
+        editor.putString(alarmID, alarmID);
         editor.commit();
 
         context.startActivity(launchIntent);
